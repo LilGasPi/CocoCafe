@@ -28,6 +28,14 @@
   </nav>
 </header>
 
+<div class="mobile-nav" id="mobileNav">
+  <a href="#sucursales">Sucursales</a>
+  <a href="#carta">Carta</a>
+  <a href="#productos">Café</a>
+  <a href="https://www.instagram.com/cococafecl/" target="_blank" rel="noopener">Instagram</a>
+  <a href="#contacto">Contacto</a>
+</div>
+
 <section class="hero" id="top">
   <div class="hero-bg" style="background-image:url('https://cococafe.cl/cdn/shop/files/fondo_tazallano.jpg?v=1754756846&width=1920')"></div>
   <div class="wrap hero-content">
@@ -55,6 +63,9 @@
           <div class="loc-name">La Marina</div>
           <div class="loc-addr">Almirante Lynch 1185</div>
           <div class="loc-hours">Lun–Sáb 09:00–21:00 · Dom y festivos 15:00–21:00</div>
+          <div class="loc-actions">
+            <a class="loc-map" href="https://www.google.com/maps/dir/?api=1&destination=Almirante+Lynch+1185%2C+San+Miguel%2C+Santiago" target="_blank" rel="noopener">Cómo llegar</a>
+          </div>
         </div>
       </div>
       <div class="loc-card">
@@ -64,6 +75,9 @@
           <div class="loc-name">Sexta Avenida</div>
           <div class="loc-addr">Sexta Avenida 1197</div>
           <div class="loc-hours">Lun–Vie 15:00–21:00 · Sáb–Dom 09:00–21:00</div>
+          <div class="loc-actions">
+            <a class="loc-map" href="https://www.google.com/maps/dir/?api=1&destination=Sexta+Avenida+1197%2C+San+Miguel%2C+Santiago" target="_blank" rel="noopener">Cómo llegar</a>
+          </div>
         </div>
       </div>
       <div class="loc-card">
@@ -73,6 +87,9 @@
           <div class="loc-name">El Llano</div>
           <div class="loc-addr">San Ignacio 2992</div>
           <div class="loc-hours">Lun–Dom 15:00–21:00</div>
+          <div class="loc-actions">
+            <a class="loc-map" href="https://www.google.com/maps/dir/?api=1&destination=San+Ignacio+2992%2C+San+Miguel%2C+Santiago" target="_blank" rel="noopener">Cómo llegar</a>
+          </div>
         </div>
       </div>
     </div>
@@ -180,7 +197,8 @@
       <div class="foot-col">
         <h4>Contacto</h4>
         <a href="mailto:cococafe@gmail.com">cococafe@gmail.com</a>
-        <a href="https://wa.me/88888888888" target="_blank" rel="noopener">+88 8 8888 8888</a>
+        <a href="https://wa.me/56983811484" target="_blank" rel="noopener">WhatsApp La Marina · +56 9 8381 1484</a>
+        <a href="https://wa.me/56964519428" target="_blank" rel="noopener">WhatsApp El Llano · +56 9 6451 9428</a>
         <a href="https://www.instagram.com/cococafecl/" target="_blank" rel="noopener">@cococafecl</a>
       </div>
       <div class="foot-col">
@@ -197,9 +215,15 @@
   </div>
 </footer>
 
-<a class="wa-float" href="https://wa.me/88888888888" target="_blank" rel="noopener" aria-label="WhatsApp">
-  <svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.29-1.39a9.9 9.9 0 0 0 4.75 1.21h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.45 17.5 2 12.04 2zm5.8 14.1c-.24.68-1.4 1.3-1.93 1.38-.5.08-1.13.11-1.83-.11-.42-.13-.96-.31-1.66-.6-2.92-1.26-4.82-4.2-4.97-4.4-.15-.2-1.19-1.58-1.19-3.02s.75-2.14 1.02-2.43c.26-.29.57-.36.76-.36s.38 0 .55.01c.１８．０１．４２－．０７．６５．５．２４．５８．８３ ２．０１．９ ２．１５．０７．１４．１１．３１．０２．５－．０９．１９－．１４．３１－．２７．４８－．１４．１６－．２９．３６－．４２．４８－．１４．１３－．２８．２８－．１２．５５．１６．２７．７２ １．１９ １．５５ １．９３ １．０６ １．９５ １．９６ １．２４ ２．２４ １．３８　２８　１４　４４　１２　６１　－０７　１７　－０２　７１　－０８３　９　－１１１　１９　－０２８　３８　－０２４　６３　－０¹⁴　２６　０９　¹³　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　         </svg>
-</a>
+<div class="wa-float-wrap" id="waFloatWrap">
+  <div class="wa-options" id="waOptions">
+    <a class="wa-option" href="https://wa.me/56983811484?text=Hola%2C%20quiero%20consultar%20por%20la%20sucursal%20La%20Marina" target="_blank" rel="noopener">La Marina</a>
+    <a class="wa-option" href="https://wa.me/56964519428?text=Hola%2C%20quiero%20consultar%20por%20la%20sucursal%20El%20Llano" target="_blank" rel="noopener">El Llano</a>
+  </div>
+  <button class="wa-float" id="waFloatBtn" aria-label="WhatsApp" aria-expanded="false">
+    <svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.29-1.39a9.9 9.9 0 0 0 4.75 1.21h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.45 17.5 2 12.04 2zm5.8 14.1c-.24.68-1.4 1.3-1.93 1.38-.5.08-1.13.11-1.83-.11-.42-.13-.96-.31-1.66-.6-2.92-1.26-4.82-4.2-4.97-4.4-.15-.2-1.19-1.58-1.19-3.02s.75-2.14 1.02-2.43c.26-.29.57-.36.76-.36s.38 0 .55.01c.18.01.34.01.49.35.18.4.6 1.4.65 1.5.06.11.09.24.02.38-.07.14-.11.21-.21.33-.1.12-.21.21-.3.28-.1.09-.21.18-.09.36.12.18.53.87 1.14 1.41.78.7 1.44.91 1.64 1.01.2.09.31.08.42-.05.13-.15.55-.64.7-.86.15-.22.29-.18.49-.11.2.07 1.26.6 1.48.71.22.11.36.16.42.26.05.09.05.53-.13 1.05z"/></svg>
+  </button>
+</div>
 
 <script src="script.js"></script>
 </body>
