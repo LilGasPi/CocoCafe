@@ -11,10 +11,21 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { threshold: 0.15 });
   revealEls.forEach(el => io.observe(el));
 
-  document.querySelectorAll('a[href^="#"]').forEach(link => {
-    link.addEventListener('click', e => {
-      const target = document.querySelector(link.getAttribute('href'));
-      if (target) { e.preventDefault(); target.scrollIntoView({ behavior:'smooth' }); }
+  const instaVideos = document.querySelectorAll('.insta-embed video');
+  instaVideos.forEach(video => {
+    const btn = video.nextElementSibling;
+    btn.addEventListener('click', () => {
+      const willUnmute = video.muted;
+      instaVideos.forEach(v => {
+        v.muted = true;
+        v.nextElementSibling.textContent = '🔇';
+        v.nextElementSibling.setAttribute('aria-label', 'Activar sonido');
+      });
+      if (willUnmute) {
+        video.muted = false;
+        btn.textContent = '🔊';
+        btn.setAttribute('aria-label', 'Silenciar');
+      }
     });
   });
 
