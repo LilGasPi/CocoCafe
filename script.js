@@ -86,18 +86,22 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   const instaVideos = document.querySelectorAll('.insta-embed video');
+  const setIcon = (btn, muted) => {
+    btn.querySelector('.icon-muted').style.display = muted ? 'block' : 'none';
+    btn.querySelector('.icon-unmuted').style.display = muted ? 'none' : 'block';
+  };
   instaVideos.forEach(video => {
     const btn = video.nextElementSibling;
     btn.addEventListener('click', () => {
       const willUnmute = video.muted;
       instaVideos.forEach(v => {
         v.muted = true;
-        v.nextElementSibling.textContent = '🔇';
+        setIcon(v.nextElementSibling, true);
         v.nextElementSibling.setAttribute('aria-label', 'Activar sonido');
       });
       if (willUnmute) {
         video.muted = false;
-        btn.textContent = '🔊';
+        setIcon(btn, false);
         btn.setAttribute('aria-label', 'Silenciar');
       }
     });

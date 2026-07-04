@@ -221,10 +221,11 @@ section{ padding:110px 0; }
 .mute-btn{
   position:absolute; top:12px; right:12px; z-index:3;
   width:34px; height:34px; border-radius:50%; border:none;
-  background:rgba(0,0,0,.55); color:#fff; font-size:15px;
+  background:rgba(0,0,0,.55); color:#fff;
   display:flex; align-items:center; justify-content:center;
   cursor:pointer; transition:background .25s var(--ease), transform .25s var(--ease);
 }
+.mute-btn svg{ width:16px; height:16px; display:block; }
 .mute-btn:hover{ background:rgba(0,0,0,.75); transform:scale(1.06); }
 .insta-cta{ margin-top:36px; text-align:center; }
 
