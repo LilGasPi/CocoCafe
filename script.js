@@ -44,6 +44,47 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  const instaGrid = document.getElementById('instaGrid');
+  const instaDots = document.getElementById('instaDots');
+  const instaPrev = document.getElementById('instaPrev');
+  const instaNext = document.getElementById('instaNext');
+  if (instaGrid && instaDots) {
+    const items = Array.from(instaGrid.querySelectorAll('.insta-embed'));
+    items.forEach((_, i) => {
+      const dot = document.createElement('button');
+      dot.className = 'dot' + (i === 0 ? ' active' : '');
+      dot.setAttribute('aria-label', `Ir al video ${i + 1}`);
+      dot.addEventListener('click', () => {
+        items[i].scrollIntoView({ behavior: 'smooth', inline: 'start', block: 'nearest' });
+      });
+      instaDots.appendChild(dot);
+    });
+    const dots = Array.from(instaDots.querySelectorAll('.dot'));
+
+    const setActiveByScroll = () => {
+      const gridLeft = instaGrid.scrollLeft;
+      let closest = 0;
+      let minDist = Infinity;
+      items.forEach((item, i) => {
+        const dist = Math.abs(item.offsetLeft - gridLeft);
+        if (dist < minDist) { minDist = dist; closest = i; }
+      });
+      dots.forEach((d, i) => d.classList.toggle('active', i === closest));
+    };
+    instaGrid.addEventListener('scroll', () => {
+      window.requestAnimationFrame(setActiveByScroll);
+    }, { passive: true });
+
+    const scrollByItem = (dir) => {
+      const item = items[0];
+      const gap = 14;
+      const amount = (item.getBoundingClientRect().width + gap) * dir;
+      instaGrid.scrollBy({ left: amount, behavior: 'smooth' });
+    };
+    if (instaPrev) instaPrev.addEventListener('click', () => scrollByItem(-1));
+    if (instaNext) instaNext.addEventListener('click', () => scrollByItem(1));
+  }
+
   const instaVideos = document.querySelectorAll('.insta-embed video');
   instaVideos.forEach(video => {
     const btn = video.nextElementSibling;

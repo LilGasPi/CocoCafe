@@ -162,24 +162,34 @@
       <a href="https://www.instagram.com/cococafecl/" target="_blank" rel="noopener" class="insta-link">Ver Instagram</a>
     </div>
 
-    <div class="insta-grid reveal" id="instaGrid">
-      <div class="insta-embed">
-        <video src="video/cococafe-la-marina.mp4" autoplay muted loop playsinline preload="auto"></video>
-        <button class="mute-btn" aria-label="Activar sonido">🔇</button>
+    <div class="insta-carousel-wrap">
+      <button class="insta-arrow insta-prev" id="instaPrev" aria-label="Anterior">
+        <svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="insta-grid reveal" id="instaGrid">
+        <div class="insta-embed">
+          <video src="video/cococafe-la-marina.mp4" autoplay muted loop playsinline preload="auto"></video>
+          <button class="mute-btn" aria-label="Activar sonido">🔇</button>
+        </div>
+        <div class="insta-embed">
+          <video src="video/cococafe-san-miguel.mp4" autoplay muted loop playsinline preload="auto"></video>
+          <button class="mute-btn" aria-label="Activar sonido">🔇</button>
+        </div>
+        <div class="insta-embed">
+          <video src="video/rico-cococafe.mp4" autoplay muted loop playsinline preload="auto"></video>
+          <button class="mute-btn" aria-label="Activar sonido">🔇</button>
+        </div>
+        <div class="insta-embed">
+          <video src="video/tu-yo.mp4" autoplay muted loop playsinline preload="auto"></video>
+          <button class="mute-btn" aria-label="Activar sonido">🔇</button>
+        </div>
       </div>
-      <div class="insta-embed">
-        <video src="video/cococafe-san-miguel.mp4" autoplay muted loop playsinline preload="auto"></video>
-        <button class="mute-btn" aria-label="Activar sonido">🔇</button>
-      </div>
-      <div class="insta-embed">
-        <video src="video/rico-cococafe.mp4" autoplay muted loop playsinline preload="auto"></video>
-        <button class="mute-btn" aria-label="Activar sonido">🔇</button>
-      </div>
-      <div class="insta-embed">
-        <video src="video/tu-yo.mp4" autoplay muted loop playsinline preload="auto"></video>
-        <button class="mute-btn" aria-label="Activar sonido">🔇</button>
-      </div>
+      <button class="insta-arrow insta-next" id="instaNext" aria-label="Siguiente">
+        <svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
     </div>
+
+    <div class="insta-dots" id="instaDots"></div>
 
     <div class="insta-cta reveal">
       <a href="https://www.instagram.com/cococafecl/" target="_blank" rel="noopener" class="btn btn-fill">Ir a @cococafecl</a>
